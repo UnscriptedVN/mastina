@@ -1,0 +1,30 @@
+/**
+ * Mastina (Dark Styles)
+ * A re-defined stylesheet for Unscripted
+ * (C) 2020 Marquis Kurt
+ * 
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+ /**
+ * The following stylesheet provides all of the dark styles for
+ * Mastina.
+ */
+:root {
+    --color-navbar: #191919;
+    --color-strip: #333333;
+    --color-strip-darker: #222222;
+    --color-strip-text: #f4f4f4;
+    --color-special-text: #f4f4f4;
+    --color-footer: #151515;
+    --color-link: #fcf84a;
+    --padding-navbar: 6px 5%;
+    --padding-content: 16px 10%;
+}
+
+body {
+    background-color: var(--color-strip);
+    color: var(--color-strip-text);
+}

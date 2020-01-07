@@ -1,0 +1,12 @@
+{% import 'base_helper.tmpl' as base with context %}
+{{ set_locale(lang) }}
+{% extends "base.tmpl" %}
+
+{% block title %}{{post.title()}} - {{ blog_title }}{% endblock %}
+{% block og_title %}{{post.title()}} - {{ blog_title }}{% endblock %}
+
+{% block content %}
+<div class="ms-strip">
+    {{ post.text() }}
+</div>
+{% endblock %}

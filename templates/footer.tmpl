@@ -1,0 +1,15 @@
+{% import 'base_helper.tmpl' as base with context %}
+{{ set_locale(lang) }}
+
+{% macro footer() %}
+<footer class="ms-footer">
+    <p><small>{{ content_footer }}</small></p>
+    <div>
+        <ul class="ms-footer-links">
+            {% for url, text in navigation_alt_links[lang] %}
+                <li><a href="{{ url }}">{{ text }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</footer>
+{% endmacro %}

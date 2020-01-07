@@ -1,0 +1,23 @@
+{% import 'base_helper.tmpl' as base with context %}
+{{ set_locale(lang) }}
+{% extends "page.tmpl" %}
+
+{% block title %}{{ kind.title() }}: {{ archive_name }} - {{ blog_title }}{% endblock %}
+{% block og_title %}{{ kind.title() }}: {{ archive_name }} - {{ blog_title }}{% endblock %}
+
+
+{% block content %}
+<div class="ms-strip thicker">
+    <h1>{{ kind.title() }} for {{ archive_name }}</h1>
+</div>
+{% for post in posts %}
+    <div class="ms-strip">
+        <h2 class="ms-strip-margins"><a href="{{ post.permalink() }}">{{ post.title() }}</a></h2>
+        <p class="ms-strip-margins">Written {{ post.formatted_date("MMMM dd, YYYY", date=post.date) }}</p>
+        <p>{{ post.description() }}</p>
+        <p>
+            <a class="ms-button" href="{{ post.permalink() }}">Read More</a>
+        </p>
+    </div>
+{% endfor %} 
+{% endblock %}

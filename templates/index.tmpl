@@ -1,0 +1,26 @@
+{% import 'base_helper.tmpl' as base with context %}
+{% import 'index_helper.tmpl' as index_helper with context %}
+{{ set_locale(lang) }}
+{% extends "base.tmpl" %}
+
+{% block content %}
+<div class="ms-strip navbar-follow grid-half thicker shadowed">
+    <div class="pr-2">
+        <h3>{{ index_helper.title() }}</h3>
+        <p>{{ index_helper.description() }}</p>
+        <p>{{ index_helper.call_to_action() }}</p>
+    </div>
+    {{ index_helper.hero() }}
+</div>
+{{ index_helper.extras() }}
+<div class="ms-strip thicker grid-thirds">
+    {% for post in posts[:3] %}
+        <div class="pa-1">
+            <a href="{{ post.permalink() }}"><h3 class="ms-strip-margins">{{ post.title() }}</h3></a>
+            <small class="ms-header-text ms-strip-margins">Written on {{ post.formatted_date("MMMM dd, YYYY", date=post.date) }}</small>
+            <p>{{ post.description() }}</p>
+            <a class="ms-button" href="{{ post.permalink() }}"><i data-feather="book"></i>Read more</a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

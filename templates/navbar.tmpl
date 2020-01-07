@@ -1,0 +1,17 @@
+{% macro navbar() %}
+<nav class="ms-navbar-container">
+    <div class="ms-navbar">
+        <button class = "ms-navbar-menu-button" onclick="toggleZip()">
+            <i data-feather="menu">Menu</i>
+        </button>
+        <a href="{{ blog_url }}" class="ms-navbar-logo">
+            <img src="/assets/img/logomark.svg" alt="{{ blog_title }}"/>
+        </a>
+        <ul class="ms-navbar-links">
+            {% for url, text in navigation_links[lang] %}
+                <li><a href="{{ url }}">{{ text }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>
+{% endmacro %}

@@ -1,0 +1,22 @@
+{% import 'base_helper.tmpl' as base with context %}
+{{ set_locale(lang) }}
+{% extends "base.tmpl" %}
+
+{% block title %}{{post.title()}} - {{ blog_title }} Devlog{% endblock %}
+{% block og_title %}{{post.title()}} - {{ blog_title }} Devlog{% endblock %}
+{% block og_description %}{{ post.description() }}{% endblock %}
+
+{% block content %}
+<div class="ms-strip darker thicker">
+    <h1 class="ms-strip-margins">{{ post.title() }}</h1>
+    <p>Written on {{ post.formatted_date("MMMM dd, YYYY", date=post.date) }}</p>
+    <p>Tags: 
+        {% for tag in post.tags %}
+            <a href="/categories/{{ tag }}/"> {{ tag }}</a>
+        {% endfor %}
+    </p>
+</div>
+<div class="ms-strip">
+    {{ post.text() }}
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% import 'base_helper.tmpl' as base with context %}
+{{ set_locale(lang) }}
+
+{% macro title() %}{{ blog_description }}{% endmacro %}
+{% macro description() %}
+This is a sample description to demo the main page's content. This should be changed in <code>index_helper.tmpl</code> to better text.
+{% endmacro %}
+{% macro call_to_action() %}
+{% endmacro %}
+{% macro hero() %}
+<div>
+    <img class="ms-shadowed strong" src="/assets/img/hero.png" />
+</div>
+{% endmacro %}
