@@ -43,6 +43,8 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: var(--fonts-standard);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, .ms-header-text {
