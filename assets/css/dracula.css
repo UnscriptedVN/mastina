@@ -17,8 +17,11 @@
   background: #282a36;
   padding: 16px;
   border-radius: 4px;
-  font-family: 'Menlo', 'Monaco', 'Courier New', Courier, monospace;
+  font-family: 'JetBrains Mono', 'Menlo', 'Monaco', 'Courier New', Courier, monospace;
   font-size: 0.9em;
+  -webkit-font-feature-settings: "liga" on, "calt" on;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .hljs-built_in,
