@@ -1,16 +1,21 @@
 {% import 'base_helper.tmpl' as base with context %}
 {% import 'index_helper.tmpl' as index_helper with context %}
+{% import 'navbar.tmpl' as navbar with context %}
 {{ set_locale(lang) }}
 {% extends "base.tmpl" %}
 
+{% set use_navbar = False %}
 {% block content %}
-<div class="ms-strip navbar-follow grid-half thicker shadowed">
-    <div class="pr-2">
-        <h3>{{ index_helper.title() }}</h3>
-        <p>{{ index_helper.description() }}</p>
-        <p>{{ index_helper.call_to_action() }}</p>
+<div class="ms-front-container">
+{{ navbar.navbar(color=False) }}
+    <div class="ms-strip navbar-follow grid-half thicker shadowed">
+        <div class="pr-2">
+            <h2>{{ index_helper.title() }}</h2>
+            <p class="ms-front-jumbo-text">{{ index_helper.description() }}</p>
+            <p class="ms-front-cta">{{ index_helper.call_to_action() }}</p>
+        </div>
+        {{ index_helper.hero() }}
     </div>
-    {{ index_helper.hero() }}
 </div>
 {{ index_helper.extras() }}
 <div class="ms-strip thicker grid-thirds">

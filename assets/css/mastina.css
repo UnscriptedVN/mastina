@@ -2,7 +2,7 @@
  * Mastina
  * A re-defined stylesheet for Unscripted
  * (C) 2020 Marquis Kurt
- * 
+ *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -161,6 +161,10 @@ hr {
     color: var(--color-special-text);
 }
 
+.ms-navbar-container.transparent {
+    background-color: transparent;
+}
+
 .ms-navbar {
     display: flex;
     vertical-align: middle;
@@ -204,6 +208,18 @@ hr {
 
 /* Content */
 
+.ms-front-container {
+    background-color: var(--color-navbar);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url(../img/hero_bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ms-front-jumbo-text {
+    font-size: 1.25rem;
+}
+
 .ms-strip {
     background-color: var(--color-strip);
     color: var(--color-strip-text);
@@ -223,7 +239,7 @@ hr {
 }
 
 .ms-strip.navbar-follow {
-    background-color: var(--color-navbar);
+    background-color: transparent;
     color: var(--color-special-text);
 }
 
@@ -397,7 +413,7 @@ a .ms-card:hover {
         vertical-align: middle;
         color: var(--color-special-text);
     }
-    
+
     .ms-navbar, .ms-footer-links {
         display: block;
     }
@@ -418,6 +434,11 @@ a .ms-card:hover {
     .ms-navbar-links li {
         padding: 10px 0;
         font-size: 1.0em;
+    }
+
+    .ms-front-cta {
+        text-align: center;
+        margin-bottom: 48px;
     }
 
     .ms-strip.grid-half, .ms-strip.grid-thirds {

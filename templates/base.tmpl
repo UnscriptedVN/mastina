@@ -32,7 +32,9 @@
         <meta property="og:image" content="/assets/favicons/android-chrome-192x192.png"/>
         <meta property=”og:type” content=”website” />
     </head>
-    {{ navbar.navbar() }}
+    {% if use_navbar == True %}
+        {{ navbar.navbar() }}
+    {% endif %}
     <body>
         <main class="ms-body">
             {% block content %}{% endblock %}

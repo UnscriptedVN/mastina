@@ -1,5 +1,5 @@
-{% macro navbar() %}
-<nav class="ms-navbar-container">
+{% macro navbar(color=True) %}
+<nav class="ms-navbar-container {% if color %}{% else %}transparent{% endif %}">
     <div class="ms-navbar">
         <button class = "ms-navbar-menu-button" onclick="toggleZip()">
             <i data-feather="menu">Menu</i>
