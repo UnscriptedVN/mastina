@@ -9,6 +9,16 @@
 {% set use_navbar = True %}
 {% block content %}
 <style>
+.post {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.post-content {
+    grid-column-start: 1;
+    grid-column-end: 10;
+}
+
 .twitter-tweet {
     background: #e3f2fd;
     color: #333333;
@@ -31,6 +41,10 @@ img {
     img {
         width: 100%;
     }
+
+    .post {
+        display: block;
+    }
 }
 </style>
 <div class="ms-strip darker thicker">
@@ -42,7 +56,9 @@ img {
         {% endfor %}
     </p>
 </div>
-<div class="ms-strip">
-    {{ post.text() }}
+<div class="ms-strip post">
+    <div class="post-content">
+        {{ post.text() }}
+    </div>
 </div>
 {% endblock %}

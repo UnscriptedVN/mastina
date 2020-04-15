@@ -193,9 +193,9 @@ hr {
 }
 
 .ms-navbar-logo img {
-    height: 40px;
+    height: 36px;
     width: auto;
-    vertical-align: middle;
+    padding: 4px 0px;
 }
 
 .ms-navbar-links {
@@ -238,6 +238,7 @@ hr {
 
 .ms-strip p {
     padding: 4px 0;
+    line-height: 1.5rem;
 }
 
 .ms-strip li {
@@ -429,7 +430,9 @@ a .ms-card:hover {
     }
 
     .ms-navbar-logo img {
-        height: 36px;
+        height: 30px;
+        vertical-align: middle;
+        padding: 0;
     }
 
     .ms-navbar-links {
