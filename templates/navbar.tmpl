@@ -2,7 +2,7 @@
 
 
 {% macro navbar(color=True) %}
-<nav class="ms-navbar-container {% if color %}{% else %}transparent{% endif %}">
+<nav class="ms-navbar-container {% if color %}{% else %}transparent{% endif %}" style="z-index:15;">
     <div class="ms-navbar">
         <button class = "ms-navbar-menu-button" onclick="toggleZip()">
             <i data-feather="menu">Menu</i>
