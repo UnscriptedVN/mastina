@@ -20,11 +20,13 @@
 {{ index_helper.extras() }}
 <div class="ms-strip thicker grid-thirds">
     {% for post in posts[:3] %}
-        <div class="pa-1">
-            <a href="{{ post.permalink() }}"><h3 class="ms-strip-margins">{{ post.title() }}</h3></a>
+        <div class="pa-1 ms-posts" style="display:flex; flex-direction:column;">
+            <a href="{{ post.permalink() }}"><h4 class="ms-strip-margins">{{ post.title() }}</h4></a>
             <small class="ms-header-text ms-strip-margins">Written on {{ post.formatted_date("MMMM dd, YYYY", date=post.date) }}</small>
-            <p>{{ post.description() }}</p>
-            <a class="ms-button" href="{{ post.permalink() }}"><i data-feather="book"></i>Read more</a>
+            <p style="flex-grow: 1;">{{ post.description() }}</p>
+            <p style="text-align: center;">
+                <a class="ms-button" href="{{ post.permalink() }}"><i data-feather="book"></i>Read more</a>
+            </p>
         </div>
     {% endfor %}
 </div>
