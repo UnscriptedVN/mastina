@@ -47,12 +47,12 @@ img {
     }
 }
 </style>
-<div class="ms-strip darker thicker">
+<div class="ms-strip darker use-special thicker">
     <h1 class="ms-strip-margins">{{ post.title() }}</h1>
     <p>Written on {{ post.formatted_date("MMMM dd, YYYY", date=post.date) }}</p>
     <p>Tags:
         {% for tag in post.tags %}
-            <a href="/categories/{{ tag }}/"> {{ tag }}</a>
+            <a class="use-special" href="/categories/{{ tag }}/"> {{ tag }}</a>
         {% endfor %}
     </p>
 </div>

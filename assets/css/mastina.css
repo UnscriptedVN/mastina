@@ -50,20 +50,22 @@
   --fonts-special: "Lexend Deca", "Inter", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
-  --color-navbar: #333333;
-  --color-strip: #ffffff;
-  --color-strip-darker: #d3d3d3;
-  --color-strip-text: #212121;
+  --color-navbar: #ffffff;
+  --color-strip: #fafafa;
+  --color-strip-darker: #959da6;
+  --color-strip-text: #6c7680;
   --color-special-text: #f4f4f4;
-  --color-footer: #212121;
-  --color-link: #05c1fd;
+  --color-footer: #edf0f5;
+  --color-link: #55b4d4;
+  --color-border: #959da61a;
+  --color-button-base: #959da666;
   --padding-navbar: 8px 5%;
   --padding-content: 16px 10%;
   --padding-content-2x: 32px 10%;
   --padding-level-1: 16px;
   --padding-level-2: 32px;
-  --shadow-standard: 0 2px 2px #11111180;
-  --shadow-strong: 0 2px 4px #111111cc;
+  --shadow-standard: 0 2px 2px #56606940;
+  --shadow-strong: 0 2px 4px #566069cc;
 }
 
 /* Basic HTML Styles */
@@ -181,10 +183,18 @@ hr {
 
 /* Navbar */
 
+.ms-front-container .ms-navbar-container {
+  color: var(--color-special-text);
+  border-bottom-style: none;
+}
+
 .ms-navbar-container {
   padding: var(--padding-navbar);
   background-color: var(--color-navbar);
-  color: var(--color-special-text);
+  color: var(--color-strip-text);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--color-border);
 }
 
 .ms-navbar-container.transparent {
@@ -196,22 +206,43 @@ hr {
   vertical-align: middle;
 }
 
-.ms-navbar a {
+.ms-front-container .ms-navbar a {
   color: var(--color-special-text);
+}
+
+.ms-navbar a {
+  color: var(--color-strip-text);
 }
 
 .ms-navbar-menu-button {
   display: none;
 }
 
+.ms-front-container .ms-navbar-menu-button .feather {
+  color: var(--color-special-text);
+}
+
+.ms-navbar-menu-button .feather {
+  color: var(--color-strip-text);
+}
+
 .ms-navbar-logo {
+  display: inline-flex;
+  align-items: center;
   flex-grow: 1;
+  padding: 2px 0px;
 }
 
 .ms-navbar-logo img {
-  height: 36px;
+  height: 30px;
   width: auto;
   padding: 4px 0px;
+}
+
+.ms-navbar-logo span {
+  font-family: var(--fonts-special);
+  font-size: 24px;
+  flex-grow: 1;
 }
 
 .ms-navbar-links {
@@ -262,6 +293,10 @@ hr {
   padding: 4px 0;
 }
 
+.use-special {
+  color: var(--color-special-text);
+}
+
 .ms-strip.darker {
   background-color: var(--color-strip-darker);
 }
@@ -295,8 +330,8 @@ hr {
 }
 
 .ms-button {
-  background-color: #d3d3d3;
-  color: #212121;
+  background-color: var(--color-button-base);
+  color: var(--color-strip-text);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.9em;
@@ -327,7 +362,7 @@ hr {
 }
 
 .ms-cta-button:hover {
-  background-color: #9135e0;
+  background-color: #e6b673;
   color: #fff;
   transition: background-color 0.25s;
 }
@@ -376,7 +411,7 @@ a .ms-card:hover {
 }
 
 .ms-posts:not(:last-child) {
-  border-right-color: var(--color-strip-darker);
+  border-color: var(--color-border);
   border-right-style: solid;
   border-right-width: 1px;
 }
@@ -387,7 +422,7 @@ a .ms-card:hover {
   background-color: var(--color-footer);
   padding: var(--padding-navbar);
   padding-bottom: 16px;
-  color: var(--color-special-text);
+  color: var(--color-strip-text);
 }
 
 .ms-footer small {
@@ -395,7 +430,7 @@ a .ms-card:hover {
 }
 
 .ms-footer a {
-  color: var(--color-special-text);
+  color: var(--color-strip-text);
 }
 
 .ms-footer a:hover {
@@ -418,7 +453,7 @@ a .ms-card:hover {
 }
 
 .ms-footer-links li a {
-  color: var(--color-special-text);
+  color: var(--color-strip-text);
   font-weight: 300;
 }
 
@@ -444,7 +479,7 @@ a .ms-card:hover {
     border: none;
     padding: 0 4px;
     margin: 0;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     color: var(--color-special-text);
   }
 
@@ -465,7 +500,7 @@ a .ms-card:hover {
 
   .ms-navbar-links.ms-navbar-menu-open {
     display: block;
-    transition: display 0.1s;
+    transition: display 0.2s;
   }
 
   .ms-navbar-links li {
@@ -481,6 +516,12 @@ a .ms-card:hover {
   .ms-strip.grid-half,
   .ms-strip.grid-thirds {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .ms-posts:not(:last-child) {
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
   }
 
   .ms-footer-links li {

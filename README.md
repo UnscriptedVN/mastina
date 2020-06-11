@@ -2,9 +2,9 @@
 
 [![MPL](https://img.shields.io/github/license/unscriptedvn/mastina)](LICENSE.txt)
 
-Mastina is a beautiful and modern theme for the Nikola static site generator and is the official theme used on the Unscripted website. Mastina is responsive, respectful to your system's theme preferences (via `prefers-color-scheme`), and includes syntax highlighting via highlight.js and the Dracula theme.
+Mastina is a beautiful, [Ayu-based](https://github.com/ayu-theme/ayu-colors), and modern theme for the Nikola static site generator and is the official theme used on the Unscripted website. Mastina is responsive, respectful to your system's theme preferences (via `prefers-color-scheme`), and includes syntax highlighting via highlight.js and the Dracula theme.
 
-![Mastina Screenshot](screenshot.jpg)
+![Mastina Screenshot](screenshot.png)
 
 ## Getting Started
 
@@ -63,7 +63,6 @@ This is a sample description to demo the main page's content. This should be cha
 
 The navigations links are pulled directly from your site's `conf.py` and can be configured normally. The links in the navigation bar use the default navigation links, and the links in the footer use the alternate navigation links.
 
-
 ## License
 
 The primary Mastina project is licensed under the Mozilla Public License. Some dependencies are available under different licenses:
@@ -72,3 +71,4 @@ The primary Mastina project is licensed under the Mozilla Public License. Some d
 - Dracula theme: MIT License
 - Highlight.js: BSD-3-Clause
 - Moment.js: MIT License
+- Ayu color scheme: MIT License
