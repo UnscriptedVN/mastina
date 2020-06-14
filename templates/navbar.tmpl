@@ -10,11 +10,17 @@
         <a href="{{ blog_url }}" class="ms-navbar-logo">
             {{ logo.logo()}}
         </a>
-        <ul class="ms-navbar-links">
-            {% for url, text in navigation_links[lang] %}
-                <li><a href="{{ url }}">{{ text }}</a></li>
-            {% endfor %}
-        </ul>
+        <div class="ms-navbar-mobile_togglable">
+            <ul class="ms-navbar-links">
+                {% for url, text in navigation_links[lang] %}
+                    <li><a href="{{ url }}">{{ text }}</a></li>
+                {% endfor %}
+            </ul>
+            <div class="ms-navbar-search">
+                <div style="flex-grow: 1;"></div>
+                {% if search_form %}{{ search_form }}{% endif %}
+            </div>
+        </div>
     </div>
 </nav>
 {% endmacro %}

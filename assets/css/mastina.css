@@ -204,6 +204,7 @@ hr {
 .ms-navbar {
   display: flex;
   vertical-align: middle;
+  align-items: center;
 }
 
 .ms-front-container .ms-navbar a {
@@ -245,6 +246,11 @@ hr {
   flex-grow: 1;
 }
 
+.ms-navbar-mobile_togglable {
+  display: flex;
+  align-items: center;
+}
+
 .ms-navbar-links {
   display: inline-flex;
   list-style-type: none;
@@ -261,6 +267,44 @@ hr {
 .ms-navbar-links li a:hover {
   color: var(--color-link);
   transition: color 0.25s;
+}
+
+.ms-navbar-search {
+  display: flex;
+  flex-direction: row;
+}
+
+.ms-navbar-search form {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  padding-left: 8px;
+}
+
+.ms-navbar-search input[name="q"] {
+  padding: 6px;
+  width: 75%;
+  background-color: var(--color-strip);
+  border-color: var(--color-border);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  font-family: var(--fonts-special);
+  transition: all 0.25s;
+}
+
+.ms-navbar-search input[name="q"]:focus {
+  outline: none;
+  box-shadow: var(--shadow-standard);
+  border-color: var(--color-link);
+  padding: 8px;
+  transition: all 0.25s;
+}
+
+.ms-navbar-search input[type="submit"] {
+  height: 0;
+  width: 0;
 }
 
 /* Content */
@@ -494,13 +538,52 @@ a .ms-card:hover {
     padding: 0;
   }
 
-  .ms-navbar-links {
+  .ms-navbar-mobile_togglable {
+    flex-direction: column-reverse;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .ms-navbar-links,
+  .ms-navbar-search {
     display: none;
+  }
+
+  .ms-navbar-search form {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  .ms-navbar-search input {
+    width: 100%;
+  }
+
+  .ms-navbar-search input[name="q"] {
+    margin-top: 16px;
+    margin-bottom: -16px;
+    padding: 12px 6px;
+    font-size: 1rem;
+  }
+
+  .ms-navbar-search input[name="q"]:focus {
+    padding: 16px 6px;
   }
 
   .ms-navbar-links.ms-navbar-menu-open {
     display: block;
     transition: display 0.2s;
+  }
+
+  .ms-navbar-search.ms-navbar-menu-open {
+    display: block;
+    transition: display 0.2s;
+    width: 100%;
+  }
+
+  .ms-navbar-search input[name="q"] {
+    width: 100%;
   }
 
   .ms-navbar-links li {
