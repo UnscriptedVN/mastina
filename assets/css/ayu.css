@@ -54,12 +54,14 @@
 }
 
 .hljs-built_in,
-.hljs-section {
+.hljs-section,
+.hljs-attribute {
   color: #55b4d4;
 }
 
 .hljs-link,
-.hljs-title {
+.hljs-title,
+.hljs-selector-class {
   color: #f2ae49;
 }
 
@@ -76,7 +78,8 @@
   color: #86b300;
 }
 
-.hljs-number {
+.hljs-number,
+.hljs-params {
   color: #a37acc;
 }
 
@@ -120,12 +123,14 @@
   }
 
   .hljs-built_in,
-  .hljs-section {
+  .hljs-section,
+  .hljs-attribute {
     color: #5ccfe6;
   }
 
   .hljs-link,
-  .hljs-title {
+  .hljs-title,
+  .hljs-selector-class {
     color: #ffd580;
   }
 
@@ -142,7 +147,8 @@
     color: #bae67e;
   }
 
-  .hljs-number {
+  .hljs-number,
+  .hljs-params {
     color: #d4bfff;
   }
 

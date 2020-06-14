@@ -283,8 +283,8 @@ hr {
 }
 
 .ms-navbar-search input[name="q"] {
-  padding: 6px;
-  width: 75%;
+  padding: 6px 24px 6px 6px;
+  width: 100%;
   background-color: var(--color-strip);
   border-color: var(--color-border);
   border-style: solid;
@@ -298,13 +298,14 @@ hr {
   outline: none;
   box-shadow: var(--shadow-standard);
   border-color: var(--color-link);
-  padding: 8px;
+  padding: 8px 32px 8px 8px;
   transition: all 0.25s;
 }
 
 .ms-navbar-search input[type="submit"] {
   height: 0;
   width: 0;
+  display: none;
 }
 
 /* Content */
@@ -563,12 +564,12 @@ a .ms-card:hover {
   .ms-navbar-search input[name="q"] {
     margin-top: 16px;
     margin-bottom: -16px;
-    padding: 12px 6px;
-    font-size: 1rem;
+    padding: 10px 6px;
+    font-size: 0.9em;
   }
 
   .ms-navbar-search input[name="q"]:focus {
-    padding: 16px 6px;
+    padding: 16px 8px;
   }
 
   .ms-navbar-links.ms-navbar-menu-open {
