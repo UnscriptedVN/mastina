@@ -1,0 +1,166 @@
+/* Ayu Color Schemes for HighlightJS
+ * Part of the Mastina theme
+ * 
+ * Copyright 2020 Marquis Kurt and Ayu theme authors.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #fafafa;
+  padding: 16px;
+  border-radius: 4px;
+  border-color: #959da61a;
+  border-width: 1px;
+  border-style: solid;
+  font-family: "JetBrains Mono", "Menlo", "Monaco", "Courier New", Courier,
+    monospace;
+  font-size: 0.9em;
+  -webkit-font-feature-settings: "liga" on, "calt" on;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-shadow: 0 1.5px 4px #56606940;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs,
+.hljs-subst {
+  color: #6c7680;
+}
+
+.hljs-keyword,
+.hljs-variable,
+.hljs-name,
+.hljs-type,
+.hljs-attr,
+.hljs-literal {
+  color: #fa8d3e;
+}
+
+.hljs-built_in,
+.hljs-section {
+  color: #55b4d4;
+}
+
+.hljs-link,
+.hljs-title {
+  color: #f2ae49;
+}
+
+.hljs-entity {
+  color: #399ee6;
+}
+
+.hljs-string,
+.hljs-meta,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #86b300;
+}
+
+.hljs-number {
+  color: #a37acc;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-doctag {
+  color: #abb0b6;
+}
+
+.hljs-addition {
+  color: #99bf4d;
+}
+
+.hljs-deletion {
+  color: #f27983;
+}
+
+.hljs-regexp {
+  color: #4cbf99;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hljs {
+    background: #1f2430;
+    border-color: #191e2a;
+    box-shadow: 0 1.5px 4px #141925;
+  }
+
+  .hljs,
+  .hljs-subst {
+    color: #cbccc6;
+  }
+
+  .hljs-keyword,
+  .hljs-variable,
+  .hljs-name,
+  .hljs-type,
+  .hljs-attr,
+  .hljs-literal {
+    color: #ffa759;
+  }
+
+  .hljs-built_in,
+  .hljs-section {
+    color: #5ccfe6;
+  }
+
+  .hljs-link,
+  .hljs-title {
+    color: #ffd580;
+  }
+
+  .hljs-entity {
+    color: #73d0ff;
+  }
+
+  .hljs-string,
+  .hljs-meta,
+  .hljs-symbol,
+  .hljs-bullet,
+  .hljs-template-tag,
+  .hljs-template-variable {
+    color: #bae67e;
+  }
+
+  .hljs-number {
+    color: #d4bfff;
+  }
+
+  .hljs-comment,
+  .hljs-quote,
+  .hljs-doctag {
+    color: #5c6773;
+  }
+
+  .hljs-addition {
+    color: #a6cc70;
+  }
+
+  .hljs-deletion {
+    color: #f27983;
+  }
+
+  .hljs-regexp {
+    color: #95e6cb;
+  }
+}
