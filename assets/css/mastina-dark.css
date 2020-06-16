@@ -13,12 +13,12 @@
  * Mastina.
  */
 :root {
-  --color-navbar: #01060e;
-  --color-strip: #0a0e14;
-  --color-strip-darker: #222222;
+  --color-navbar: #3d424d66;
+  --color-strip: #0d1016;
+  --color-strip-darker: #0a0e14;
   --color-strip-text: #b3b1ad;
-  --color-special-text: #f4f4f4;
-  --color-footer: #151515;
+  --color-special-text: #d4d4d4;
+  --color-footer: #3d424d66;
   --color-link: #39bae6;
   --color-border: #01060e;
   --color-button-base: #3d424d99;

@@ -132,6 +132,7 @@ code:not(.hljs) {
 
 hr {
   margin: var(--padding-content);
+  border-color: var(--color-border);
   border-width: 0.25px;
 }
 
