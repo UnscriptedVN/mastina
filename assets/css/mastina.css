@@ -114,6 +114,11 @@ img.ms-shadowed.strong {
   box-shadow: var(--shadow-strong);
 }
 
+blockquote {
+  font-style: italic;
+  font-family: var(--fonts-special);
+}
+
 /* For non-Highlight.js styles */
 code:not(.hljs) {
   padding: 2px 4px;
