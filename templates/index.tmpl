@@ -18,6 +18,7 @@
     </div>
 </div>
 {{ index_helper.extras() }}
+{% if theme_config["show_blogroll_on_home"] %}
 <div class="ms-strip thicker grid-thirds">
     {% for post in posts[:3] %}
         <div class="pa-1 ms-posts" style="display:flex; flex-direction:column;">
@@ -30,4 +31,5 @@
         </div>
     {% endfor %}
 </div>
+{% endif %}
 {% endblock %}
